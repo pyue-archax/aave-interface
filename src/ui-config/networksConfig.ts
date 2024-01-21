@@ -436,4 +436,21 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
       url: 'https://bridge.gnosischain.com/',
     },
   },
+  // [ChainId.archax_sepolia]: {
+  //   name: 'Archax Chain (AArchaxVE)',
+  //   // privateJsonRPCUrl:
+  //   //   'https://rpc.tenderly.co/fork/c48f4f66-ea6d-41f9-a743-9ea8070126ad',
+  //   publicJsonRPCUrl: ['https://sepolia.etherscan.io', 'https://sepolia.gateway.tenderly.co/73UQOCq5MuuL2bIB6TyibR', 'https://sepolia.gateway.tenderly.co'],
+  //   // publicJsonRPCWSUrl: 'wss://sepolia.gateway.tenderly.co/73UQOCq5MuuL2bIB6TyibR',
+  //   // publicJsonRPCWSUrl: 'wss://eth-goerli.public.blastapi.io',
+  //   // protocolDataUrl: '',
+  //   baseUniswapAdapter: '0x0',
+  //   baseAssetSymbol: 'ETH',
+  //   wrappedBaseAssetSymbol: 'arxETH',
+  //   baseAssetDecimals: 18,
+  //   explorerLink: 'https://sepolia.etherscan.io',
+  //   // usdMarket: true,
+  //   isTestnet: true,
+  //   networkLogoPath: '/icons/networks/archax.svg',
+  // },
 } as const;

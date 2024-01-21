@@ -108,6 +108,8 @@ export enum CustomMarket {
   proto_mumbai = 'proto_mumbai',
   amm_mainnet = 'amm_mainnet',
   proto_goerli = 'proto_goerli',
+  proto_archax_sepolia = 'proto_archax_sepolia',
+  proto_archax_mumbai = 'proto_archax_mumbai',
   // external
   // permissioned_market = 'permissioned_market',
 }
@@ -720,6 +722,44 @@ export const marketsData: {
       UI_POOL_DATA_PROVIDER: AaveV3Gnosis.UI_POOL_DATA_PROVIDER,
       UI_INCENTIVE_DATA_PROVIDER: AaveV3Gnosis.UI_INCENTIVE_DATA_PROVIDER,
       COLLECTOR: AaveV3Gnosis.COLLECTOR,
+    },
+  },
+  // Archax Market v1
+  [CustomMarket.proto_archax_sepolia]: {
+    marketTitle: 'Archax Ethereum Sepolia',
+    market: CustomMarket.proto_sepolia_v3,
+    v3: true,
+    chainId: ChainId.sepolia,
+    enabledFeatures: {
+      faucet: true,
+    },
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: AaveV3Sepolia.POOL_ADDRESSES_PROVIDER,
+      LENDING_POOL: AaveV3Sepolia.POOL,
+      WETH_GATEWAY: AaveV3Sepolia.WETH_GATEWAY,
+      FAUCET: AaveV3Sepolia.FAUCET,
+      WALLET_BALANCE_PROVIDER: AaveV3Sepolia.WALLET_BALANCE_PROVIDER,
+      UI_POOL_DATA_PROVIDER: AaveV3Sepolia.UI_POOL_DATA_PROVIDER,
+      UI_INCENTIVE_DATA_PROVIDER: AaveV3Sepolia.UI_INCENTIVE_DATA_PROVIDER,
+    },
+  },
+  [CustomMarket.proto_archax_mumbai]: {
+    marketTitle: 'Archax Polygon Mumbai',
+    market: CustomMarket.proto_mumbai,
+    chainId: ChainId.mumbai,
+    enabledFeatures: {
+      incentives: true,
+      faucet: true,
+    },
+    subgraphUrl: 'https://api.thegraph.com/subgraphs/name/aave/aave-v2-polygon-mumbai',
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: '0x30A343C75796775b5C4171f4179679583A87a112', //'0x25686063A622Ab5E375F59d9Ba262DAd51dF1130', //LendingPoolAddressesProvider
+      LENDING_POOL: '0xBEe93d0DFA1514e42d7dDCFB53409c15e254B4D9', //'0x23505473118619887C482415caC5ab22a56834c7', // or PoolAdmin:0xd18a42AD503F2EFA392b95C97eaAb8B8Fc45f532? //Pool-Implementation
+      WETH_GATEWAY: '0x9fEe7C4daFbBF71b08cb97d594c7E1Eedc30BB7f', //'0xfaa99C5B85F53821c5261990B5C9FF801F15e34E', //WrappedTokenGatewayV3
+      FAUCET: '0x56cB16f06Ba75cEEf26C3920bbAaBBECe17ff444', //'0x94bda2A4411920cabb7d6596A421b67B50bDdE34', //Faucet-Archax
+      WALLET_BALANCE_PROVIDER: '0x30ef150320284691404fc1828A96829124D350AA', //'0x63D00b30A4406f9384380ACd85e333841274EB43', //WalletBalanceProvider
+      UI_POOL_DATA_PROVIDER: '0x718a55872A17d08Bc5ebE54d36B66192D2C2EFb9', //UiIncentiveDataProviderV3
+      UI_INCENTIVE_DATA_PROVIDER: '0x662B061Fb41aecc0618BE2857a460676192AD347', //UiPoolDataProviderV3
     },
   },
 } as const;

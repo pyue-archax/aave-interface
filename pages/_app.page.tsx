@@ -130,7 +130,7 @@ export default function MyApp(props: MyAppProps) {
         description={
           'Aave is an Open Source Protocol to create Non-Custodial Liquidity Markets to earn interest on supplying and borrowing assets with a variable or stable interest rate. The protocol is designed for easy integration into your products and services.'
         }
-        imageUrl="https://app.aave.com/aaveMetaLogo-min.jpg"
+        imageUrl="https://26880336.fs1.hubspotusercontent-eu1.net/hubfs/26880336/archax.com/assets/new_homepage/hero_banner/archax-bird-white.png"
       />
       <LanguageProvider>
         <QueryClientProvider client={queryClient}>

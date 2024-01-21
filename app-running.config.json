@@ -1,0 +1,7 @@
+{
+  "apps":[{
+    "name":"archax-aave",
+    "script":"npx serve out",
+    "interpreter":"none"
+  }]
+}

@@ -37,15 +37,17 @@ export const navigation: Navigation[] = [
     link: ROUTES.governance,
     title: t`Governance`,
     dataCy: 'menuGovernance',
-    // isVisible: () =>
-    //   process.env.NEXT_PUBLIC_ENABLE_GOVERNANCE === 'true' &&
-    //   process.env.NEXT_PUBLIC_ENV === 'prod' &&
-    //   !ENABLE_TESTNET,
+    isVisible: () =>
+      process.env.NEXT_PUBLIC_ENABLE_GOVERNANCE === 'true' &&
+      process.env.NEXT_PUBLIC_ENV === 'prod' &&
+      !ENABLE_TESTNET,
   },
   {
     link: ROUTES.faucet,
     title: t`Faucet`,
-    isVisible: () => process.env.NEXT_PUBLIC_ENV === 'staging' || ENABLE_TESTNET,
+    isVisible: () =>
+      process.env.NEXT_PUBLIC_ENABLE_FAUCET === 'true' &&
+      (process.env.NEXT_PUBLIC_ENV === 'staging' || ENABLE_TESTNET),
   },
 ];
 
