@@ -1,3 +1,6 @@
 body {
   --wcm-z-index: 1300;
 }
+.filter-logo-background {
+  filter: invert(10%) sepia(5%) saturate(6657%) hue-rotate(193deg) brightness(92%) contrast(92%);
+}

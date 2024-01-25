@@ -1,8 +1,8 @@
 {
-  "short_name": "Aave",
-  "name": "Aave",
-  "description": "Non-custodial liquidity protocol",
-  "iconPath": "aave.svg",
+  "short_name": "Archax",
+  "name": "Archax",
+  "description": "Non-custodial liquidity protocol for institution",
+  "iconPath": "archax_logo.svg",
   "icons": [
     {
       "src": "favicon32.png",
